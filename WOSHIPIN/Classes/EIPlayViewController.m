@@ -617,6 +617,7 @@ static void rtsppe_event_handler(void *caller, int evt,int param1);
   //Set up status bar
   //[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
   //[[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeLeft];
+    [self adjustLayout:self.interfaceOrientation];
 }
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
@@ -636,6 +637,90 @@ static void rtsppe_event_handler(void *caller, int evt,int param1);
   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
   [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
   [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
+}
+
+- (void)adjustLayout:(UIInterfaceOrientation)interfaceOrientation
+{
+    NSLog(@"%s:interfaceOrientation=%d", __FUNCTION__, interfaceOrientation);
+    NSLog(@"videoView.bounds=%f,%f,%f,%f", self.videoView.bounds.origin.x, self.videoView.bounds.origin.y, self.videoView.bounds.size.width, self.videoView.bounds.size.height);
+    NSLog(@"videoView.center=%f,%f", self.videoView.center.x, self.videoView.center.y);
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationPortrait:
+        {
+            videoContextView_.contentMode = UIViewContentModeScaleAspectFit;
+            //_navBar.frame = CGRectMake(0, 20, 320, 44);
+            //_navBar.topItem.titleView.frame = CGRectMake(0, 0, 320, 44);
+            _navBar.frame = CGRectMake(0, 20, SCREEN_WIDTH, 44);
+            _navBar.topItem.titleView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 44);
+            
+            recordingMark_.center = CGPointMake(305, 40);
+            _timeLabel.center = CGPointMake(280, 42+44);
+            statusLabel.center = CGPointMake(50, 42+44);
+            //_titleLabel.center = CGPointMake(130, 22);
+            
+            
+            zoominButton_.center = CGPointMake(40, 410);
+            zoomoutButton_.center = CGPointMake(100, 410);
+            irisopenButton_.center = CGPointMake(220, 410);
+            iriscloseButton_.center = CGPointMake(280, 410);
+            
+            arrowupButton_.center = CGPointMake(160, 80);
+            arrowdownButton_.center = CGPointMake(160, 410);
+            arrowleftButton_.center = CGPointMake(22, 240);
+            arrowrightButton_.center = CGPointMake(298, 240);
+            
+            displayModeButton_.hidden = YES;
+            
+//            videoContextView_.center = CGPointMake(160, 240);
+//            videoContextView_.bounds = CGRectMake(0,0,320,240);
+            videoContextView_.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+            videoContextView_.bounds = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT/2);
+            
+            touchHintLabel.center = CGPointMake(160,240);
+            ptzCtrlHintImage.center = CGPointMake(160,240);
+            
+        }
+            break;
+            
+        case UIInterfaceOrientationLandscapeLeft:
+        case UIInterfaceOrientationLandscapeRight:
+        {
+			//_navBar.frame = CGRectMake(0, 20, 480, 44);
+            //_navBar.topItem.titleView.frame = CGRectMake(0, 0, 480, 44);
+            _navBar.frame = CGRectMake(0, 20, SCREEN_HEIGHT, 44);
+            _navBar.topItem.titleView.frame = CGRectMake(0, 0, SCREEN_HEIGHT, 44);
+            
+			recordingMark_.center = CGPointMake(420, 40);
+			_timeLabel.center = CGPointMake(440, 44+42);
+			statusLabel.center = CGPointMake(50, 44+42);
+			//_titleLabel.center = CGPointMake(210, 22);
+            
+			zoominButton_.center = CGPointMake(98, 252);
+			zoomoutButton_.center = CGPointMake(160, 252);
+			irisopenButton_.center = CGPointMake(326, 252);
+			iriscloseButton_.center = CGPointMake(393, 252);
+            
+            
+			arrowupButton_.center = CGPointMake(240, 80);
+			arrowdownButton_.center = CGPointMake(240, 252);
+			arrowleftButton_.center = CGPointMake(22, 160);
+			arrowrightButton_.center = CGPointMake(458, 160);	
+            
+			displayModeButton_.hidden = NO;
+			//videoContextView_.center = CGPointMake(240, 160);
+			//videoContextView_.bounds = CGRectMake(0, 0, 480, 320);
+            videoContextView_.center = CGPointMake(SCREEN_HEIGHT/2, SCREEN_WIDTH/2);
+            videoContextView_.bounds = CGRectMake(0, 0, SCREEN_HEIGHT, SCREEN_WIDTH);
+			touchHintLabel.center = CGPointMake(240,160);
+            ptzCtrlHintImage.center = CGPointMake(240,160);
+            
+        }
+            break;
+            
+            
+        default:
+            break;
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
@@ -672,74 +757,8 @@ static void rtsppe_event_handler(void *caller, int evt,int param1);
   //NSLog(@"will animate to : %d", interfaceOrientation);
   [[UIApplication sharedApplication] setStatusBarOrientation:interfaceOrientation];
   //  [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
-  switch (interfaceOrientation) {
-	  case UIInterfaceOrientationPortrait:
-	  {
-		videoContextView_.contentMode = UIViewContentModeScaleAspectFit;
-		_navBar.frame = CGRectMake(0, 20, 320, 44);
-		recordingMark_.center = CGPointMake(305, 40);
-		_navBar.topItem.titleView.frame = CGRectMake(0, 0, 320, 44);
-		_timeLabel.center = CGPointMake(280, 42+44);
-		statusLabel.center = CGPointMake(50, 42+44);
-		//_titleLabel.center = CGPointMake(130, 22);
 
-
-		zoominButton_.center = CGPointMake(40, 410);
-		zoomoutButton_.center = CGPointMake(100, 410);
-		irisopenButton_.center = CGPointMake(220, 410);
-		iriscloseButton_.center = CGPointMake(280, 410);
-
-		arrowupButton_.center = CGPointMake(160, 80);	
-		arrowdownButton_.center = CGPointMake(160, 410);
-		arrowleftButton_.center = CGPointMake(22, 240);	
-		arrowrightButton_.center = CGPointMake(298, 240);	
-
-		displayModeButton_.hidden = YES;
-
-		videoContextView_.center = CGPointMake(160, 240);
-		videoContextView_.bounds = CGRectMake(0,0,320,240);
-
-		touchHintLabel.center = CGPointMake(160,240);
-		  ptzCtrlHintImage.center = CGPointMake(160,240);
-		  
-	  }
-      break;
-		  
-	  case UIInterfaceOrientationLandscapeLeft:
-	  case UIInterfaceOrientationLandscapeRight:
-	  {
-			_navBar.frame = CGRectMake(0, 20, 480, 44);
-			recordingMark_.center = CGPointMake(420, 40);
-			_navBar.topItem.titleView.frame = CGRectMake(0, 0, 480, 44);
-			_timeLabel.center = CGPointMake(440, 44+42);
-			statusLabel.center = CGPointMake(50, 44+42);
-			//_titleLabel.center = CGPointMake(210, 22);
-
-			zoominButton_.center = CGPointMake(98, 252);
-			zoomoutButton_.center = CGPointMake(160, 252);
-			irisopenButton_.center = CGPointMake(326, 252);
-			iriscloseButton_.center = CGPointMake(393, 252);
-
-
-			arrowupButton_.center = CGPointMake(240, 80);	
-			arrowdownButton_.center = CGPointMake(240, 252);
-			arrowleftButton_.center = CGPointMake(22, 160);	
-			arrowrightButton_.center = CGPointMake(458, 160);	
-
-			displayModeButton_.hidden = NO;
-			videoContextView_.center = CGPointMake(240, 160);
-			videoContextView_.bounds = CGRectMake(0, 0, 480, 320);
-			touchHintLabel.center = CGPointMake(240,160);
-		  ptzCtrlHintImage.center = CGPointMake(240,160);
-
-	  }
-      break;
-
-      
-    default:
-      break;
-  }
-  
+    [self adjustLayout:interfaceOrientation];
   [UIView commitAnimations];
 }
 

@@ -34,8 +34,6 @@
     // Override point for customization after application launch.
 	[[MCUEngine sharedObj] load];
     
-    CGRect rc = [[UIScreen mainScreen] bounds];
-    NSLog(@"%s: window.x=%f, %f, %f, %f", __func__, rc.origin.x, rc.origin.y, rc.size.width, ([UIScreen mainScreen].currentMode.size.height));
     
 	NSMutableArray *tabBarViewControllers = [NSMutableArray array];
     

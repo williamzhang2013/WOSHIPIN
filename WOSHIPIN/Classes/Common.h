@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/////////////////////////////////////////////////////////////////////
+//                             Macro                               //
+/////////////////////////////////////////////////////////////////////
+#define SCREEN_WIDTH             ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT            ([UIScreen mainScreen].bounds.size.height)
+#define IOS_VERSION              [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CURR_SYS_VER             ([[UIDevice currentDevice] systemVersion])
+#define CURR_LANG                ([[NSLocale preferredLanguages] objectAtIndex:0])
 
+
+/////////////////////////////////////////////////////////////////////
+//                        extern variable                          //
+/////////////////////////////////////////////////////////////////////
 extern NSString * const RCRecordingFileExtension;
 extern int const RCRecordingFileExtensionLength;
 

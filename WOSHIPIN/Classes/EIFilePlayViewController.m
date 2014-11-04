@@ -9,6 +9,7 @@
 #import "EIFilePlayViewController.h"
 #import "FileAttribute.h"
 #import "VideoView.h"
+#import "Common.h"
 
 @implementation EIFilePlayViewController
 @synthesize videoView;
@@ -118,7 +119,7 @@ static void pf_event_handler(void *caller, int evt,int param1)
 	
 	playtimeLabel.text = [NSString stringWithFormat:@"00:00/%02d:%02d", totallen/60,totallen%60 ];
 
-	
+	[self adjustLayout:self.interfaceOrientation];
 	atimer = [NSTimer scheduledTimerWithTimeInterval:1. target:self selector:@selector(_onUpdatePlaytimeMethod:) userInfo:nil repeats:YES];
 }
 
@@ -198,6 +199,35 @@ static void pf_event_handler(void *caller, int evt,int param1)
 	}
 }
 
+- (void)adjustLayout:(UIInterfaceOrientation)interfaceOrientation
+{
+	switch (interfaceOrientation) {
+		case UIInterfaceOrientationPortrait:
+        {
+            //[progressSlider setFrame:CGRectMake(10, 400, 300, 22)];
+            progressSlider.frame = CGRectMake(10, 400, SCREEN_WIDTH-20, 22);
+            [playtimeLabel setFrame:CGRectMake(20, 430, 121, 21)];
+            //[videoView setFrame:CGRectMake(0, 120, 320, 240)];
+            videoView.bounds = CGRectMake(0, 120, SCREEN_WIDTH, SCREEN_HEIGHT/2);
+            videoView.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+        }
+			break;
+		case UIInterfaceOrientationLandscapeLeft:
+		case UIInterfaceOrientationLandscapeRight:
+        {
+            //[progressSlider setFrame:CGRectMake(10, 295, 460, 22)];
+            progressSlider.frame = CGRectMake(10, 295, SCREEN_HEIGHT-20, 22);
+            [playtimeLabel setFrame:CGRectMake(20, 270, 121, 21)];
+            //[videoView setCenter:CGPointMake(240, 160)];
+            //[videoView setBounds:CGRectMake(0, 0, 480, 320)];
+            videoView.center = CGPointMake(SCREEN_HEIGHT/2, SCREEN_WIDTH/2);
+            videoView.bounds = CGRectMake(0, 0, SCREEN_HEIGHT, SCREEN_WIDTH);
+        }
+			break;
+		default:
+			break;
+	}
+}
 
 
 // Override to allow orientations other than the default portrait orientation.
@@ -216,28 +246,9 @@ static void pf_event_handler(void *caller, int evt,int param1)
 	[UIView setAnimationDuration:duration];
 	[[UIApplication sharedApplication] setStatusBarOrientation:interfaceOrientation];
 	
-	switch (interfaceOrientation) {
-		case UIInterfaceOrientationPortrait:
-		    {
-				[progressSlider setFrame:CGRectMake(10, 400, 300, 22)];
-				[playtimeLabel setFrame:CGRectMake(20, 430, 121, 21)];
-				[videoView setFrame:CGRectMake(0, 120, 320, 240)];
-		    }
-			break;
-		case UIInterfaceOrientationLandscapeLeft:
-		case UIInterfaceOrientationLandscapeRight:
-		    {
-				[progressSlider setFrame:CGRectMake(10, 295, 460, 22)];
-				[playtimeLabel setFrame:CGRectMake(20, 270, 121, 21)];
-				[videoView setCenter:CGPointMake(240, 160)];
-				[videoView setBounds:CGRectMake(0, 0, 480, 320)];
-		    }
-			break;
-		default:
-			break;
-	}
+    [self adjustLayout:interfaceOrientation];
+
 	[UIView commitAnimations];
-	
 }
 
 

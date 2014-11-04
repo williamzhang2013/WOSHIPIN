@@ -42,10 +42,6 @@ extern int login_reason;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"%s: view.x=%f, %f, %f, %f", __func__, self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
-    CGRect rc = [[UIScreen mainScreen] bounds];
-    NSLog(@"%s: window.x=%f, %f, %f, %f", __func__, rc.origin.x, rc.origin.y, rc.size.width, ([UIScreen mainScreen].bounds.size.height));
 
  
 	self.title = @"沃·视频";
