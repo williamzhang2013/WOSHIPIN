@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5275B791A09C10900D5A33C /* About_Splash2-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5275B761A09C10900D5A33C /* About_Splash2-568h@2x.png */; };
+		C5275B7A1A09C10900D5A33C /* About_Splash2.png in Resources */ = {isa = PBXBuildFile; fileRef = C5275B771A09C10900D5A33C /* About_Splash2.png */; };
+		C5275B7B1A09C10900D5A33C /* About_Splash2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5275B781A09C10900D5A33C /* About_Splash2@2x.png */; };
+		C5275B7E1A09C11200D5A33C /* AppIcon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C5275B7C1A09C11200D5A33C /* AppIcon~iphone.png */; };
+		C5275B7F1A09C11200D5A33C /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5275B7D1A09C11200D5A33C /* AppIcon@2x.png */; };
 		C5C682E319EE373B00BD2345 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5C682E219EE373B00BD2345 /* Default@2x.png */; };
 		C5C682E519EE374400BD2345 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C5C682E419EE374400BD2345 /* Default-568h@2x.png */; };
 		DF3A91E516512A63002805D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3A91E416512A63002805D7 /* UIKit.framework */; };
@@ -55,8 +60,6 @@
 		DF3A92C916512DED002805D7 /* _Setting.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927116512DED002805D7 /* _Setting.png */; };
 		DF3A92CA16512DED002805D7 /* _Setting_HighLighted.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927216512DED002805D7 /* _Setting_HighLighted.png */; };
 		DF3A92CB16512DED002805D7 /* About_Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927316512DED002805D7 /* About_Splash.png */; };
-		DF3A92CC16512DED002805D7 /* About_Splash2.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927416512DED002805D7 /* About_Splash2.png */; };
-		DF3A92CD16512DED002805D7 /* About_Splash_.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927516512DED002805D7 /* About_Splash_.png */; };
 		DF3A92CE16512DED002805D7 /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927616512DED002805D7 /* AppIcon.png */; };
 		DF3A92D016512DED002805D7 /* bk.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927816512DED002805D7 /* bk.png */; };
 		DF3A92D116512DED002805D7 /* button_background.png in Resources */ = {isa = PBXBuildFile; fileRef = DF3A927916512DED002805D7 /* button_background.png */; };
@@ -177,6 +180,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C5275B761A09C10900D5A33C /* About_Splash2-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About_Splash2-568h@2x.png"; sourceTree = "<group>"; };
+		C5275B771A09C10900D5A33C /* About_Splash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About_Splash2.png; sourceTree = "<group>"; };
+		C5275B781A09C10900D5A33C /* About_Splash2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "About_Splash2@2x.png"; sourceTree = "<group>"; };
+		C5275B7C1A09C11200D5A33C /* AppIcon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon~iphone.png"; sourceTree = "<group>"; };
+		C5275B7D1A09C11200D5A33C /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
 		C5C682E219EE373B00BD2345 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C5C682E419EE374400BD2345 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DF3A91E016512A63002805D7 /* WOSHIPIN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WOSHIPIN.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,8 +260,6 @@
 		DF3A927116512DED002805D7 /* _Setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _Setting.png; sourceTree = "<group>"; };
 		DF3A927216512DED002805D7 /* _Setting_HighLighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _Setting_HighLighted.png; sourceTree = "<group>"; };
 		DF3A927316512DED002805D7 /* About_Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About_Splash.png; sourceTree = "<group>"; };
-		DF3A927416512DED002805D7 /* About_Splash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About_Splash2.png; sourceTree = "<group>"; };
-		DF3A927516512DED002805D7 /* About_Splash_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = About_Splash_.png; sourceTree = "<group>"; };
 		DF3A927616512DED002805D7 /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		DF3A927816512DED002805D7 /* bk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bk.png; sourceTree = "<group>"; };
 		DF3A927916512DED002805D7 /* button_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_background.png; sourceTree = "<group>"; };
@@ -547,9 +553,12 @@
 				DF3A927116512DED002805D7 /* _Setting.png */,
 				DF3A927216512DED002805D7 /* _Setting_HighLighted.png */,
 				DF3A927316512DED002805D7 /* About_Splash.png */,
-				DF3A927416512DED002805D7 /* About_Splash2.png */,
-				DF3A927516512DED002805D7 /* About_Splash_.png */,
+				C5275B761A09C10900D5A33C /* About_Splash2-568h@2x.png */,
+				C5275B771A09C10900D5A33C /* About_Splash2.png */,
+				C5275B781A09C10900D5A33C /* About_Splash2@2x.png */,
 				DF3A927616512DED002805D7 /* AppIcon.png */,
+				C5275B7C1A09C11200D5A33C /* AppIcon~iphone.png */,
+				C5275B7D1A09C11200D5A33C /* AppIcon@2x.png */,
 				DF3A927816512DED002805D7 /* bk.png */,
 				DF3A927916512DED002805D7 /* button_background.png */,
 				DF3A927A16512DED002805D7 /* C_Control_2.png */,
@@ -751,6 +760,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF3A91EF16512A63002805D7 /* InfoPlist.strings in Resources */,
+				C5275B791A09C10900D5A33C /* About_Splash2-568h@2x.png in Resources */,
 				DF3A924516512DE1002805D7 /* AboutViewController.xib in Resources */,
 				DF3A924716512DE1002805D7 /* AlarmTimeCfgViewController.xib in Resources */,
 				DF3A925516512DE1002805D7 /* EIFilePlayViewController.xib in Resources */,
@@ -760,6 +770,7 @@
 				DF3A926516512DE1002805D7 /* UserPswLogin.xib in Resources */,
 				DF3A92C216512DED002805D7 /* _About.png in Resources */,
 				DF3A92C316512DED002805D7 /* _About_HighLighted.png in Resources */,
+				C5275B7A1A09C10900D5A33C /* About_Splash2.png in Resources */,
 				DF3A92C416512DED002805D7 /* _Camera_List.png in Resources */,
 				DF3A92C516512DED002805D7 /* _Camera_List_HighLighted.png in Resources */,
 				DF3A92C616512DED002805D7 /* _ChinaUnicom Logo.png in Resources */,
@@ -768,8 +779,6 @@
 				DF3A92C916512DED002805D7 /* _Setting.png in Resources */,
 				DF3A92CA16512DED002805D7 /* _Setting_HighLighted.png in Resources */,
 				DF3A92CB16512DED002805D7 /* About_Splash.png in Resources */,
-				DF3A92CC16512DED002805D7 /* About_Splash2.png in Resources */,
-				DF3A92CD16512DED002805D7 /* About_Splash_.png in Resources */,
 				DF3A92CE16512DED002805D7 /* AppIcon.png in Resources */,
 				DF3A92D016512DED002805D7 /* bk.png in Resources */,
 				DF3A92D116512DED002805D7 /* button_background.png in Resources */,
@@ -778,6 +787,7 @@
 				DF3A92D416512DED002805D7 /* C_Panel Image.png in Resources */,
 				DF3A92D516512DED002805D7 /* C_Recording.png in Resources */,
 				DF3A92D616512DED002805D7 /* C_Recording_2.png in Resources */,
+				C5275B7B1A09C10900D5A33C /* About_Splash2@2x.png in Resources */,
 				DF3A92D716512DED002805D7 /* C_Recording_Pressed.png in Resources */,
 				DF3A92D816512DED002805D7 /* C_Recording_Pressed_2.png in Resources */,
 				DF3A92D916512DED002805D7 /* C_Snapshot.png in Resources */,
@@ -786,6 +796,7 @@
 				DF3A92DC16512DED002805D7 /* C_Snapshot_Pressed_2.png in Resources */,
 				DF3A92DD16512DED002805D7 /* cell_area.png in Resources */,
 				DF3A92DE16512DED002805D7 /* cell_camera.png in Resources */,
+				C5275B7E1A09C11200D5A33C /* AppIcon~iphone.png in Resources */,
 				DF3A92DF16512DED002805D7 /* D_Brightness_Down.png in Resources */,
 				DF3A92E016512DED002805D7 /* D_Brightness_Down_Pressed.png in Resources */,
 				DF3A92E116512DED002805D7 /* D_Brightness_up.png in Resources */,
@@ -816,6 +827,7 @@
 				DF3A92FA16512DED002805D7 /* h_up_pressed.png in Resources */,
 				DF3A92FB16512DED002805D7 /* i_zoomin_normal.png in Resources */,
 				DF3A92FC16512DED002805D7 /* i_zoomin_pressed.png in Resources */,
+				C5275B7F1A09C11200D5A33C /* AppIcon@2x.png in Resources */,
 				DF3A92FD16512DED002805D7 /* i_zoomout_disable.png in Resources */,
 				DF3A92FE16512DED002805D7 /* i_zoomout_normal.png in Resources */,
 				DF3A92FF16512DED002805D7 /* i_zoomout_pressed.png in Resources */,
@@ -978,7 +990,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WOSHIPIN/WOSHIPIN-Prefix.pch";
 				INFOPLIST_FILE = "WOSHIPIN/WOSHIPIN-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SDL\"",
@@ -1003,7 +1015,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WOSHIPIN/WOSHIPIN-Prefix.pch";
 				INFOPLIST_FILE = "WOSHIPIN/WOSHIPIN-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SDL\"",
