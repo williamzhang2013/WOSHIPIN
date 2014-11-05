@@ -10,12 +10,15 @@
 
 
 @interface AboutViewController : UIViewController {
-	 UILabel *verLabel;
-	 UILabel *buildLabel;
+    UILabel *verLabel;
+	UILabel *buildLabel;
+    UILabel *contentLabel;
+     
 }
 
 
 @property (retain, nonatomic) IBOutlet UILabel *verLabel;
 @property (retain, nonatomic) IBOutlet UILabel *buildLabel;
+@property (retain, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end

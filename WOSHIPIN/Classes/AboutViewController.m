@@ -163,6 +163,7 @@ static int parseDATE(char*date_str, int *year, int *month, int *day)
 
 @synthesize verLabel;
 @synthesize buildLabel;
+@synthesize contentLabel;
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -253,21 +254,32 @@ static int parseDATE(char*date_str, int *year, int *month, int *day)
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-	self.verLabel = nil;
-	self.buildLabel = nil;
-}
+//- (void)viewDidUnload {
+//    [self setContentLabel:nil];
+//    [super viewDidUnload];
+//    // Release any retained subviews of the main view.
+//    // e.g. self.myOutlet = nil;
+//	self.verLabel = nil;
+//	self.buildLabel = nil;
+//}
 
 
 - (void)dealloc {
     [super dealloc];
-	
+    
+    [contentLabel release];	
 	[verLabel release];
 	[buildLabel release];
 }
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_5_1
+-(NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+#endif
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
 
 @end
