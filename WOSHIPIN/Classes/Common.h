@@ -166,8 +166,9 @@ enum {
 -(NSString *)queryCameraName:(int)entry_idx withVsId: (NSString*)_vsId withVideoId:(NSString *)_videoId;
 
 
--(void) entryQueryVSProcess: (NSMutableDictionary *)dict;
+- (void)entryQueryVSProcess: (NSMutableDictionary *)dict;
 - (void)getVsAlarmConfiguration:(NSDictionary *)dict;
 - (void)setVsAlarmConfiguration:(NSDictionary *)dict  config:(NSString *)_cfg;
 
++ (BOOL)isCurrentSystemOSVersionAbove70;
 @end

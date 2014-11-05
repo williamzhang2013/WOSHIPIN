@@ -405,6 +405,20 @@ enum {
 	return [NSString stringWithUTF8String:psw_md5_c];
 }
 
+/**
+ *	@brief	Judge if the OS Version is > 7.0 or not
+ *
+ *	@return	YES --- 7.0 or above, NO --- under 7.0
+ */
++ (BOOL)isCurrentSystemOSVersionAbove70
+{
+    if (IOS_VERSION >= 7.0) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 -(NSArray*)getAreaList:(int)entry_id
 {
 	return _wxx_areaList[entry_id];

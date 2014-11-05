@@ -112,10 +112,19 @@ extern int g_current_active_entry;
 		cell.imageView.image = [UIImage imageNamed:@"cell_camera.png"];
         
         //xinghua 20121029
-        if ([dict valueForKey:@"GetVsAlarmConfiguration"] || [dict valueForKey:@"hasAllPrivilege"])
-            cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-        else
+        if ([dict valueForKey:@"GetVsAlarmConfiguration"] || [dict valueForKey:@"hasAllPrivilege"]){
+#ifdef SUPPORT_CAM_DETAIL_INFO
+            if ([MCUEngine isCurrentSystemOSVersionAbove70]) {
+                cell.accessoryType = UITableViewCellAccessoryDetailButton;
+            } else {
+                cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            }
+#else
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+#endif
+        } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
+        }
 		
 		NSString *online = [dict valueForKey:@"online"];
 		if (online == nil)
