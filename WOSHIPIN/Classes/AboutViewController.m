@@ -121,10 +121,10 @@
  */
 
 
-#define MAIN_VER	3
-#define MINOR_VER	3
-
-const NSString *cuVersion = @"V3.3";
+//#define MAIN_VER	3
+//#define MINOR_VER	3
+//
+//const NSString *cuVersion = @"V1.0";
 
 const char *all_month_abbr[12]= {
 	"Jan",
@@ -277,6 +277,7 @@ static int parseDATE(char*date_str, int *year, int *month, int *day)
     return UIInterfaceOrientationMaskPortrait;
 }
 #endif
+
 - (BOOL)shouldAutorotate
 {
     return YES;

@@ -22,7 +22,7 @@ int const RCRecordingFileExtensionLength = 3;
 NSString * const RCRecordingFileDatePartFormat = @"yyyyMMddHHmmss";
 int const RCRecordingFileDatePartFormatLength = 14;
 
-extern const NSString *cuVersion;
+//extern const NSString *cuVersion;
 
 const NSString *kIPAddress_CMS =  @"121.31.255.6"; 
 //const NSString *kIPAddress_VAU = @"121.31.255.9";//not used, should be parsed out dynamically
@@ -419,6 +419,14 @@ enum {
     }
 }
 
++ (NSString*)getCurrentVersion
+{
+    NSDictionary *infoDict =[[NSBundle mainBundle] infoDictionary];
+    NSString     *versionNum =[infoDict objectForKey:@"CFBundleShortVersionString"];
+    
+    return versionNum;
+}
+
 -(NSArray*)getAreaList:(int)entry_id
 {
 	return _wxx_areaList[entry_id];
@@ -680,7 +688,7 @@ enum {
 	[self.delegate onLoggingProgressReport: LOG_LOGIN param:result_code ];
 	
 	NSString*feedURLString = [NSString stringWithFormat:@"http://%@:%@/viss/UserLogin?locale=zh_CN&password=%@&username=%@&cuVersion=%@&cuType=M_CU",
-							  [[MCUEngine sharedObj] getCMSIPAddr], [MCUEngine getCMSPort],[MCUEngine calcMD5:psw],  userName,   cuVersion];
+							  [[MCUEngine sharedObj] getCMSIPAddr], [MCUEngine getCMSPort],[MCUEngine calcMD5:psw],  userName,   [MCUEngine getCurrentVersion]];
 
     self.userName_login = userName;//saved for later use (GetUser)
 

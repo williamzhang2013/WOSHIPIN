@@ -85,7 +85,6 @@ enum {
 	NSInteger result_code; //command result code. 0: ok ; others fail
 	NSString *result_errorStr;
     
-    
     //these two fields will be used by many commands
 	NSString *session_id;
     NSString *domain_id;
@@ -171,4 +170,5 @@ enum {
 - (void)setVsAlarmConfiguration:(NSDictionary *)dict  config:(NSString *)_cfg;
 
 + (BOOL)isCurrentSystemOSVersionAbove70;
++ (NSString*)getCurrentVersion;
 @end
