@@ -44,12 +44,12 @@ extern int login_reason;
     [super viewDidLoad];
 
  
-	self.title = @"沃·视频";
-	self.navigationController.title = @"沃·视频";
+	self.title = @"沃视频";
+	self.navigationController.title = @"沃视频";
 	
-	entryList = [[NSArray alloc] initWithObjects:@"沃看联通", @"沃看交通",@"沃看企业",@"沃看直播",@"沃看影视",nil ];
-	filterKeyList = [[NSArray alloc] initWithObjects:@"联通", @"交通",@"企业",@"", @"",nil];//@"营业厅",
-	entryImageList = [[NSArray alloc] initWithObjects:@"wo_lt.png", @"wo_jt.png", @"wo_qy.png", @"wo_zb.png", @"wo_ys.png",nil];
+	entryList = [[NSArray alloc] initWithObjects:@"沃看联通", @"沃看企业", @"沃看交通", @"沃看直播", @"沃看影视",nil ];
+	filterKeyList = [[NSArray alloc] initWithObjects:@"联通", @"企业", @"交通", @"", @"", nil];//@"营业厅",
+	entryImageList = [[NSArray alloc] initWithObjects:@"wo_lt.png", @"wo_qy.png",  @"wo_jt.png", @"wo_zb.png", @"wo_ys.png",nil];
 	
 }
 
@@ -113,14 +113,14 @@ extern int login_reason;
 	{
 		cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		cell.detailTextLabel.text = nil;//wozibo_url;
+		cell.detailTextLabel.text = wozibo_url;
 		return cell;
 	}
 	else if (indexPath.row == 4 )
 	{
 		cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		cell.detailTextLabel.text = nil;//woyinshi_url;
+		cell.detailTextLabel.text = woyinshi_url;
 		return cell;		
 	}
 	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;

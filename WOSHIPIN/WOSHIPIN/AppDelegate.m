@@ -46,7 +46,7 @@
 		navController.tabBarItem = tabBarItem;
 		[tabBarItem release];
 		
-		navController.title = @"沃·视频";
+		navController.title = @"沃视频";
 		[tabBarViewControllers addObject:navController];  
 		[entryListVC release];
 		[navController release];
@@ -62,7 +62,7 @@
      areaNavController.tabBarItem = areaNavTabBarItem;
      [areaNavTabBarItem release];
      
-     areaNavController.title = @"沃·视频";
+     areaNavController.title = @"沃视频";
      [tabBarViewControllers addObject:areaNavController];  
      [areaListVC release];
      [areaNavController release];

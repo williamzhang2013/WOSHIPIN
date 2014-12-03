@@ -212,12 +212,12 @@ enum {
 
 		[defaults setObject:@"wlt" forKey:@"user_0"];
 		//[defaults setObject:@"123456" forKey:@"psw_0"];
+        
+        [defaults setObject:@"wqy" forKey:@"user_1"];
+		//[defaults setObject:@"123456" forKey:@"psw_2"];
 		
-		[defaults setObject:@"wjt" forKey:@"user_1"];
+		[defaults setObject:@"wjt" forKey:@"user_2"];
 		//[defaults setObject:@"123456" forKey:@"psw_1"];
-
-		[defaults setObject:@"wqy" forKey:@"user_2"];
-		//[defaults setObject:@"123456" forKey:@"psw_2"];//xinghua 20111011, don't preset this password for wqy
 		
 		[defaults setBool:YES forKey:@"saveaccount_0"];
 		[defaults setBool:YES forKey:@"saveaccount_1"];
