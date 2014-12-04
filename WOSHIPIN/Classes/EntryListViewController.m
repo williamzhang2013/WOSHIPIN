@@ -13,8 +13,10 @@
 
 
 int g_current_active_entry ;
+const NSString *wojiaotong_url = @"http://jt.gx10010.com";
 const NSString *wozibo_url = @"http://live.gx10010.com";
 const NSString *woyinshi_url = @"http://tv.gx10010.com/demo.jsp";
+
 extern int login_reason;
 
 @implementation EntryListViewController
@@ -108,24 +110,30 @@ extern int login_reason;
 	cell.imageView.image = [UIImage imageNamed:imgfilename];
     cell.textLabel.font = [UIFont boldSystemFontOfSize: 24];
     cell.textLabel.text = [entryList objectAtIndex:indexPath.row];
-	
-	if (indexPath.row == 3 )
-	{
+    
+    if (indexPath.row == 2) {
+        cell.accessoryView = nil;
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		cell.detailTextLabel.text = wojiaotong_url;
+		return cell;
+    }else if (indexPath.row == 3 ) {
 		cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
 		cell.detailTextLabel.text = wozibo_url;
 		return cell;
-	}
-	else if (indexPath.row == 4 )
-	{
+	} else if (indexPath.row == 4 ) {
 		cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
 		cell.detailTextLabel.text = woyinshi_url;
 		return cell;		
 	}
-	cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    if ([MCUEngine isCurrentSystemOSVersionAbove70]) {
+        cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
 	//custom view of "log button"
-#if  1
+#if  0
 
 	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	button.frame = CGRectMake(0.0, 0.0, 60, 36);
@@ -191,6 +199,13 @@ extern int login_reason;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 2 )
+	{
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:wojiaotong_url]];
+		
+		return;
+	}
 	
 	if (indexPath.row == 3 )
 	{
@@ -208,7 +223,8 @@ extern int login_reason;
 			[alert release];
 		}
 		else*/
-			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:wozibo_url]];
+		[[UIApplication sharedApplication] openURL:[NSURL URLWithString:wozibo_url]];
+        //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:wojiaotong_url]];
 		
 		return;
 	}

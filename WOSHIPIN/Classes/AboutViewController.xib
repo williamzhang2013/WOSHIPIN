@@ -38,7 +38,7 @@
                     <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="简介: 沃·视频是广西联通打造的实时视频监控平台，可以让个人、家庭、企业客户随时随地查看交通、校园、公司、小区等视频监控画面，同时还可以将监控内容录制并保存在手机中。中国联通，创新改变世界。" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" adjustsFontSizeToFit="NO" id="15">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="简介: 沃视频是广西联通打造的实时视频监控平台，可以让个人、家庭、企业客户随时随地查看交通、校园、公司、小区等视频监控画面，同时还可以将监控内容录制并保存在手机中。中国联通，创新改变世界。" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" adjustsFontSizeToFit="NO" id="15">
                     <rect key="frame" x="20" y="212" width="280" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                     <inset key="insetFor6xAndEarlier" minX="0.0" minY="100" maxX="0.0" maxY="-100"/>

@@ -998,8 +998,8 @@
 					"\"$(SRCROOT)/live/iphone\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "183F8E8A-3395-416E-84DA-BFB9DD133050";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "183F8E8A-3395-416E-84DA-BFB9DD133050";
+				PROVISIONING_PROFILE = "960c66d9-1de2-4aed-aa7b-2817038116cd";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "960c66d9-1de2-4aed-aa7b-2817038116cd";
 				USER_HEADER_SEARCH_PATHS = "SDL live/** ffmpeg/include";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1023,8 +1023,8 @@
 					"\"$(SRCROOT)/live/iphone\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d7315000-6af7-4fe8-a79d-016fa6d89647";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "d7315000-6af7-4fe8-a79d-016fa6d89647";
+				PROVISIONING_PROFILE = "d2eb60f3-ae0f-4bb3-a99b-06aa7fbe9cd0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "d2eb60f3-ae0f-4bb3-a99b-06aa7fbe9cd0";
 				USER_HEADER_SEARCH_PATHS = "SDL live/** ffmpeg/include";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
