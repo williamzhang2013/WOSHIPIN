@@ -14,8 +14,10 @@
 
 int g_current_active_entry ;
 const NSString *wojiaotong_url = @"http://jt.gx10010.com";
-const NSString *wozibo_url = @"http://live.gx10010.com";
-const NSString *woyinshi_url = @"http://tv.gx10010.com/demo.jsp";
+//const NSString *wozibo_url = @"http://live.gx10010.com";
+const NSString *wozibo_url = @"http://tv.gx10010.com/folder,guangxi,RDWS_3GZX_IPS_GX03141818229614614,48611.page";
+//const NSString *woyinshi_url = @"http://tv.gx10010.com/demo.jsp";
+const NSString *woyinshi_url = @"http://tv.gx10010.com/folder,guangxi,RDWS_3GZX_IPS_GX03141818229614614,48463.page";
 
 extern int login_reason;
 
@@ -114,17 +116,17 @@ extern int login_reason;
     if (indexPath.row == 2) {
         cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		cell.detailTextLabel.text = wojiaotong_url;
+		cell.detailTextLabel.text = nil; //wojiaotong_url;
 		return cell;
     }else if (indexPath.row == 3 ) {
 		cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		cell.detailTextLabel.text = wozibo_url;
+		cell.detailTextLabel.text = nil; //wozibo_url;
 		return cell;
 	} else if (indexPath.row == 4 ) {
 		cell.accessoryView = nil;
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		cell.detailTextLabel.text = woyinshi_url;
+		cell.detailTextLabel.text = nil; //woyinshi_url;
 		return cell;		
 	}
     if ([MCUEngine isCurrentSystemOSVersionAbove70]) {
